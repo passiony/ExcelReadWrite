@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1274908973
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cefdd92e352898c957f34609d4e13fe9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d2135aaa039a2847dfcb09bac340a2c4
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 8f0fc44e07e966646a77516f2a227cb8, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/booknames.asset
+Dependencies: []
