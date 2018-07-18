@@ -1,30 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
+/// <summary>
+/// 读取booknames的scriptObject文件
+/// 使用Resources直接读取
+/// </summary>
 public class ReadHolders : MonoBehaviour {
+    readonly string assetName = "booknames";
 
-    public string assetName = "bonenames";
-	// Use this for initialization
-	void Start () {
-        readAsset();
-	}
-	
-	public void readAsset()
+	void Start ()
     {
-        Object asset = Resources.Load<Object>(assetName);
-        BookElementHolder ceh = (BookElementHolder)asset;
-        foreach (Good gd in ceh.goods)
+        BookHolder asset = Resources.Load<BookHolder>(assetName);
+        foreach (Menu gd in asset.menus)
         {
+            Debug.Log(gd.m_Id);
+            Debug.Log(gd.m_level);
+            Debug.Log(gd.m_parentId);
             Debug.Log(gd.m_name);
         }
     }
-
-    public string RootPath
-    {
-        get
-        {
-            return Application.dataPath;
-        }
-    }
-
 }
